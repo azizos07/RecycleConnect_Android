@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Buttons (Before Login) -->
+    <color name="button_before_login_color">#16B09D</color>
+    <!-- Buttons (Inside the App) -->
+    <color name="button_inside_app_color">#0C8A7B</color>
+    <!-- Titles -->
+    <color name="titles_color">#101817</color>
+    <!-- Grey for Text, Input Placeholders, Icons -->
+    <color name="grey_color">#6f7575</color>
+    <color name="red_color">#c40e0e</color>
+    <color name="background">#F9F9F9</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

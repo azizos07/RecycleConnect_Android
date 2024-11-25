@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/navigation_home"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="Home" />
+
+
+    <item
+        android:id="@+id/navigation_medication"
+        android:enabled="true"
+        android:icon="@drawable/med"
+        android:title="Réservation" />
+
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:enabled="true"
+        android:icon="@drawable/article"
+        android:title="Facture" />
+
+    <item
+        android:id="@+id/navigation_medical_record"
+        android:enabled="true"
+        android:icon="@drawable/news"
+        android:title="Préférances" />
+
+
+</menu>
+

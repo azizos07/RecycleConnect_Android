@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.AddMedicalRecordActivity">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:id="@+id/linearLayoutHeader"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            app:fabCustomSize="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arrowback" />
+
+        <TextView
+            android:id="@+id/textViewAddMedicalRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="?attr/textAppearanceTitleLarge"
+            android:text="Add Medical Record"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <!-- Medical Record Information Section -->
+    <LinearLayout
+        android:id="@+id/linearLayoutMedicalRecordInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutHeader">
+
+        <!-- Text Input for Medical Record Patient -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutPatient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPatientName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Patient Name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Text Input for Medical Record Doctor -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDoctorName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Doctor Name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Text Input for Immunization Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutImmunizationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextImmunizationName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Immunization Name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- DatePicker Button for Immunization -->
+        <Button
+            android:id="@+id/btnShowImmunizationDatePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Choose Immunization Date" />
+
+        <!-- Text Input for Allergy Substance -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutAllergySubstance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextAllergySubstance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Allergy Substance" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Text Input for Allergy Reaction -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutAllergyReaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextAllergyReaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Allergy Reaction" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Text Input for Immunization Date -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutImmunizationDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextImmunizationDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Immunization Date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- TextView for Allergy Pin -->
+        <TextView
+            android:id="@+id/textViewAllergyPin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Pinned"
+            android:textSize="16sp" />
+
+        <!-- Text Input for Medical Notes -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutMedicalNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextMedicalNotes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Medical Notes" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Button to Create Medical Record -->
+        <Button
+            android:id="@+id/buttonCreateMedicalRecord"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/button_inside_app_color"
+            android:text="Create Medical Record" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
